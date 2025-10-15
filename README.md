@@ -30,7 +30,7 @@ Reproducibility: Tuned params, fitted scalers, and trained models are saved and 
 Data note: dataset.xlsx is gitignored. Use your own file; adjust src/config.py as needed.
 
 ## Project Structure
-
+```
 .
 ├─ src/
 │  ├─ config.py            # DATA.CV, PATHS, COLS, LSTM hyperparams
@@ -55,7 +55,7 @@ Data note: dataset.xlsx is gitignored. Use your own file; adjust src/config.py a
    └─ raw/
       └─ dataset.xlsx      # (gitignored)
 
-
+```
 ## Target & Features (high level)
 
 Target: a continuous hourly series (e.g., energy demand “Load”).
