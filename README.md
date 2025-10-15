@@ -33,23 +33,28 @@ Data note: dataset.xlsx is gitignored. Use your own file; adjust src/config.py a
 
 .
 ├─ src/
-│ ├─ config.py # DATA.CV, PATHS, COLS, LSTM hyperparams
-│ ├─ data.py # load_data('dataset.xlsx')
-│ ├─ preprocess.py # preprocess(), scale_features()
-│ ├─ features.py # build_feature_matrix()
-│ ├─ tuning.py # model spaces + GridSearchCV + TimeSeriesSplit
-│ ├─ models.py # LSTMRegressor (fit/predict/save/load), \_LSTM, seqDataset
-│ ├─ metrics.py # rmse, mae, mape, smape, r2 (+ scorer helpers)
-│ ├─ train.py # training: tune/load params, fit, save
-│ └─ eval.py # evaluation: build test FE with context, score
+│  ├─ config.py            # DATA.CV, PATHS, COLS, LSTM hyperparams
+│  ├─ data.py              # load_data('dataset.xlsx')
+│  ├─ preprocess.py        # preprocess(), scale_features()
+│  ├─ features.py          # build_feature_matrix()
+│  ├─ tuning.py            # model spaces + GridSearchCV + TimeSeriesSplit
+│  ├─ models.py            # LSTMRegressor (fit/predict/save/load), _LSTM, seqDataset
+│  ├─ metrics.py           # rmse, mae, mape, smape, r2 (+ scorer helpers)
+│  ├─ train.py             # training: tune/load params, fit, save
+│  └─ eval.py              # evaluation: build test FE with context, score
 ├─ artifacts/
-│ ├─ tuning/best_params.json # tuned hyperparams (or latest.json)
-│ └─ scalers/scalers.joblib # StandardScalers fitted on train
+│  ├─ tuning/
+│  │  └─ best_params.json  # tuned hyperparams (or latest.json)
+│  └─ scalers/
+│     └─ scalers.joblib    # StandardScalers fitted on train
 ├─ models/
-│ ├─ rf_1.joblib, hgb_1.joblib, ... # trained sklearn pipelines
-│ └─ lstm.pt # LSTM weights + scalers + meta
+│  ├─ rf_1.joblib          # trained sklearn pipeline (gitignored)
+│  ├─ hgb_1.joblib         # trained sklearn pipeline (gitignored)
+│  └─ lstm.pt              # LSTM weights + scalers + meta (gitignored)
 └─ data/
-└─ raw/dataset.xlsx # (gitignored)
+   └─ raw/
+      └─ dataset.xlsx      # (gitignored)
+
 
 ## Target & Features (high level)
 
